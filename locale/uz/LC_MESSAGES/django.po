@@ -1,0 +1,192 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-10 14:46+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+msgid "Name"
+msgstr "Ism"
+
+msgid "Text"
+msgstr "Matn"
+
+msgid "Title"
+msgstr "Sarlavha"
+
+msgid "Info"
+msgstr "Ma'lumot"
+
+msgid "Tags"
+msgstr "Teglar"
+
+msgid "Description"
+msgstr "Tavsif"
+
+msgid "Lugx Gaming Shop"
+msgstr "Lugx Oʻyin Doʻkoni"
+
+msgid "Home"
+msgstr "Bosh sahifa"
+
+msgid "Our Shop"
+msgstr "Bizning doʻkon"
+
+msgid "Product Details"
+msgstr "Mahsulot tafsilotlari"
+
+msgid "Contact Us"
+msgstr "Bogʻlanish"
+
+msgid "Sign In"
+msgstr "Kirish"
+
+msgid "Menu"
+msgstr "Menyu"
+
+msgid "Copyright © 2025 LUGX Gaming Company. All rights reserved."
+msgstr "© 2025 LUGX Gaming Company. Barcha huquqlar himoyalangan."
+
+msgid "Say Hello!"
+msgstr "Salom Ber!"
+
+msgid "Address"
+msgstr "Manzil"
+
+msgid "Phone"
+msgstr "Telefon"
+
+msgid "Email"
+msgstr "Elektron pochta"
+
+msgid "Send Message Now"
+msgstr "Xabar yuborish"
+
+msgid "Welcome to lugx"
+msgstr "Lugx ga xush kelibsiz"
+
+msgid "BEST GAMING SITE EVER!"
+msgstr "ENG YAXSHI OʻYIN SAYTI!"
+
+msgid "LUGX Gaming is free "
+msgstr "LUGX Gaming bepul "
+
+msgid "Search Now"
+msgstr "Qidirish"
+
+msgid "Free Storage"
+msgstr "Bepul xotira"
+
+msgid "User More"
+msgstr "Koʻproq foydalanuvchilar"
+
+msgid "Reply Ready"
+msgstr "Javob tayyor"
+
+msgid "Easy Layout"
+msgstr "Oson interfeys"
+
+msgid "Trending"
+msgstr "Trendda"
+
+msgid "Trending Games"
+msgstr "Trenddagi oʻyinlar"
+
+msgid "View All"
+msgstr "Hammasini koʻrish"
+
+msgid "No trending products available."
+msgstr "Trenddagi mahsulotlar mavjud emas."
+
+msgid "TOP GAMES"
+msgstr "TOP OʻYINLAR"
+
+msgid "Most Played"
+msgstr "Eng koʻp oʻynalgan"
+
+msgid "Explore"
+msgstr "Kashf etish"
+
+msgid "No most played products available."
+msgstr "Eng koʻp oʻynalgan mahsulotlar mavjud emas."
+
+msgid "Categories"
+msgstr "Kategoriyalar"
+
+msgid "Top Categories"
+msgstr "Top kategoriyalar"
+
+msgid "No categories available."
+msgstr "Kategoriyalar mavjud emas."
+
+msgid "Go Pre-Order Buy & Get Best"
+msgstr "Oldindan buyurtma qiling va eng yaxshisini oling"
+
+msgid "Prices"
+msgstr "Narxlar"
+
+msgid "For You!"
+msgstr "Siz uchun!"
+
+msgid "Lorem ipsum dolor consectetur adipiscing, sed do eiusmod tempor incididunt."
+msgstr "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+
+msgid "Shop Now"
+msgstr "Xarid qilish"
+
+msgid "NEWSLETTER"
+msgstr "YANGILIKLAR"
+
+msgid "Get Up To $100 Off Just Buy "
+msgstr "$100 gacha chegirma olish uchun "
+
+msgid "Subscribe"
+msgstr "Obuna boʻling"
+
+msgid "Newsletter!"
+msgstr "yangiliklar!"
+
+msgid "Subscribe Now"
+msgstr "Hoziroq obuna boʻling"
+
+msgid "Shop"
+msgstr "Doʻkon"
+
+msgid "ADD TO CART"
+msgstr "SAVATCHAGA QOʻSHISH"
+
+msgid "Game ID:"
+msgstr "Oʻyin ID:"
+
+msgid "Genre:"
+msgstr "Janr:"
+
+msgid "Multi-tags:"
+msgstr "Teglar:"
+
+msgid "No reviews yet."
+msgstr "Hozircha sharhlar yoʻq."
+
+msgid "Related Games"
+msgstr "Tegishli oʻyinlar"
+
+msgid "No related games found."
+msgstr "Tegishli oʻyinlar topilmadi."
+
+msgid "Show All"
+msgstr "Hammasini koʻrsatish"
+
+msgid "No products available."
+msgstr "Mahsulotlar mavjud emas."

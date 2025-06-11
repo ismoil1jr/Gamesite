@@ -1,0 +1,254 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-10 14:46+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+#: .\app\models.py:12
+msgid "Name"
+msgstr ""
+
+#: .\app\models.py:41
+msgid "Text"
+msgstr ""
+
+#: .\app\models.py:53
+msgid "Title"
+msgstr ""
+
+#: .\app\models.py:54
+msgid "Info"
+msgstr ""
+
+#: .\app\models.py:55
+msgid "Tags"
+msgstr ""
+
+#: .\app\models.py:56 .\templates\product-details.html:55
+msgid "Description"
+msgstr ""
+
+#: .\templates\base.html:16
+msgid "Lugx Gaming Shop"
+msgstr ""
+
+#: .\templates\base.html:65 .\templates\contact.html:11
+#: .\templates\product-details.html:11 .\templates\shop.html:10
+msgid "Home"
+msgstr ""
+
+#: .\templates\base.html:66 .\templates\index.html:225 .\templates\shop.html:10
+msgid "Our Shop"
+msgstr ""
+
+#: .\templates\base.html:67
+msgid "Product Details"
+msgstr ""
+
+#: .\templates\base.html:68 .\templates\contact.html:10
+#: .\templates\contact.html:11 .\templates\contact.html:23
+msgid "Contact Us"
+msgstr ""
+
+#: .\templates\base.html:69
+msgid "Sign In"
+msgstr ""
+
+#: .\templates\base.html:80
+msgid "Menu"
+msgstr ""
+
+#: .\templates\base.html:101
+msgid "Copyright © 2025 LUGX Gaming Company. All rights reserved."
+msgstr ""
+
+#: .\templates\contact.html:24
+msgid "Say Hello!"
+msgstr ""
+
+#: .\templates\contact.html:29
+msgid "Address"
+msgstr ""
+
+#: .\templates\contact.html:30
+msgid "Phone"
+msgstr ""
+
+#: .\templates\contact.html:31
+msgid "Email"
+msgstr ""
+
+#: .\templates\contact.html:74
+msgid "Send Message Now"
+msgstr ""
+
+#: .\templates\index.html:10
+msgid "Welcome to lugx"
+msgstr ""
+
+#: .\templates\index.html:11
+msgid "BEST GAMING SITE EVER!"
+msgstr ""
+
+#: .\templates\index.html:12
+msgid "LUGX Gaming is free "
+msgstr ""
+
+#: .\templates\index.html:16
+msgid "Search Now"
+msgstr ""
+
+#: .\templates\index.html:41
+msgid "Free Storage"
+msgstr ""
+
+#: .\templates\index.html:51
+msgid "User More"
+msgstr ""
+
+#: .\templates\index.html:61
+msgid "Reply Ready"
+msgstr ""
+
+#: .\templates\index.html:71
+msgid "Easy Layout"
+msgstr ""
+
+#: .\templates\index.html:84
+msgid "Trending"
+msgstr ""
+
+#: .\templates\index.html:85
+msgid "Trending Games"
+msgstr ""
+
+#: .\templates\index.html:90 .\templates\index.html:129
+#: .\templates\product-details.html:88
+msgid "View All"
+msgstr ""
+
+#: .\templates\index.html:111
+msgid "No trending products available."
+msgstr ""
+
+#: .\templates\index.html:123
+msgid "TOP GAMES"
+msgstr ""
+
+#: .\templates\index.html:124
+msgid "Most Played"
+msgstr ""
+
+#: .\templates\index.html:143
+msgid "Explore"
+msgstr ""
+
+#: .\templates\index.html:149
+msgid "No most played products available."
+msgstr ""
+
+#: .\templates\index.html:161
+msgid "Categories"
+msgstr ""
+
+#: .\templates\index.html:162
+msgid "Top Categories"
+msgstr ""
+
+#: .\templates\index.html:178
+msgid "No categories available."
+msgstr ""
+
+#: .\templates\index.html:226
+msgid "Go Pre-Order Buy & Get Best"
+msgstr ""
+
+#: .\templates\index.html:226
+msgid "Prices"
+msgstr ""
+
+#: .\templates\index.html:226
+msgid "For You!"
+msgstr ""
+
+#: .\templates\index.html:228
+msgid ""
+"Lorem ipsum dolor consectetur adipiscing, sed do eiusmod tempor incididunt."
+msgstr ""
+
+#: .\templates\index.html:230
+msgid "Shop Now"
+msgstr ""
+
+#: .\templates\index.html:241
+msgid "NEWSLETTER"
+msgstr ""
+
+#: .\templates\index.html:242
+msgid "Get Up To $100 Off Just Buy "
+msgstr ""
+
+#: .\templates\index.html:242
+msgid "Subscribe"
+msgstr ""
+
+#: .\templates\index.html:242
+msgid "Newsletter!"
+msgstr ""
+
+#: .\templates\index.html:247
+msgid "Subscribe Now"
+msgstr ""
+
+#: .\templates\product-details.html:11
+msgid "Shop"
+msgstr ""
+
+#: .\templates\product-details.html:31
+msgid "ADD TO CART"
+msgstr ""
+
+#: .\templates\product-details.html:34
+msgid "Game ID:"
+msgstr ""
+
+#: .\templates\product-details.html:35
+msgid "Genre:"
+msgstr ""
+
+#: .\templates\product-details.html:36
+msgid "Multi-tags:"
+msgstr ""
+
+#: .\templates\product-details.html:67
+msgid "No reviews yet."
+msgstr ""
+
+#: .\templates\product-details.html:83
+msgid "Related Games"
+msgstr ""
+
+#: .\templates\product-details.html:102
+msgid "No related games found."
+msgstr ""
+
+#: .\templates\shop.html:20
+msgid "Show All"
+msgstr ""
+
+#: .\templates\shop.html:45
+msgid "No products available."
+msgstr ""

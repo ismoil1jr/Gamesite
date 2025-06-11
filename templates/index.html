@@ -1,0 +1,264 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+  <div class="main-banner">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 align-self-center">
+          <div class="caption header-text">
+            <h6>{% trans 'Welcome to lugx' %}</h6>
+            <h2>{% trans 'BEST GAMING SITE EVER!' %}</h2>
+            <p>{% trans 'LUGX Gaming is free ' %}</p>
+            <div class="search-input">
+              <form id="search" action="{% url 'shop' %}">
+                <input type="text" placeholder="Type Something" id='searchText' name="searchKeyword" onkeypress="handle" />
+                <button role="button">{% trans 'Search Now' %}</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 offset-lg-2">
+          <div class="right-image">
+            <img src="{% static 'images/banner-image.jpg' %}" alt="">
+            <span class="price">$22</span>
+            <span class="offer">-40%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="features">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6">
+          <a href="#">
+            <div class="item">
+              <div class="image">
+                <img src="{% static 'images/featured-01.png' %}" alt="" style="max-width: 44px;">
+              </div>
+              <h4>{% trans 'Free Storage' %}</h4>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <a href="#">
+            <div class="item">
+              <div class="image">
+                <img src="{% static 'images/featured-02.png' %}" alt="" style="max-width: 44px;">
+              </div>
+              <h4>{% trans 'User More' %}</h4>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <a href="#">
+            <div class="item">
+              <div class="image">
+                <img src="{% static 'images/featured-03.png' %}" alt="" style="max-width: 44px;">
+              </div>
+              <h4>{% trans 'Reply Ready' %}</h4>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <a href="#">
+            <div class="item">
+              <div class="image">
+                <img src="{% static 'images/featured-04.png' %}" alt="" style="max-width: 44px;">
+              </div>
+              <h4>{% trans 'Easy Layout' %}</h4>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section trending">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="section-heading">
+            <h6>{% trans 'Trending' %}</h6>
+            <h2>{% trans 'Trending Games' %}</h2>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="main-button">
+            <a href="{% url 'shop' %}">{% trans 'View All' %}</a>
+          </div>
+        </div>
+        {% for item in trending_products %}
+          <div class="col-lg-3 col-md-6">
+            <div class="item">
+              <div class="thumb">
+                <a href="{% url 'product_details' item.id %}">
+                  <img src="{{ item.imageURL }}" alt="{{ item.title }}">
+                </a>
+                <span class="price">${{ item.new_price }}</span>
+              </div>
+              <div class="down-content">
+                <span class="category">{{ item.category_type.name }}</span>
+                <h4>{{ item.title }}</h4>
+                <a href="{% url 'product_details' item.id %}"><i class="fa fa-shopping-bag"></i></a>
+              </div>
+            </div>
+          </div>
+        {% empty %}
+          <div class="col-12">
+            <p>{% trans 'No trending products available.' %}</p>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <div class="section most-played">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="section-heading">
+            <h6>{% trans 'TOP GAMES' %}</h6>
+            <h2>{% trans 'Most Played' %}</h2>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="main-button">
+            <a href="{% url 'shop' %}">{% trans 'View All' %}</a>
+          </div>
+        </div>
+        {% for item in most_played_products %}
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+          <div class="item">
+            <div class="thumb">
+              <a href="{% url 'product_details' item.id %}">
+                <img src="{{ item.imageURL }}" alt="{{ item.title }}" style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px;">
+              </a>
+            </div>
+            <div class="down-content" style="padding: 12px; text-align: center;">
+              <span class="category" style="display: block; font-weight: bold; margin-bottom: 5px;">
+                {{ item.category_type.name }}
+              </span>
+              <h4 style="font-size: 18px; font-weight: 600; margin: 10px 0;">
+                {{ item.title|truncatewords:5 }}
+              </h4>
+              <a href="{% url 'product_details' item.id %}" class="btn btn-outline-primary btn-sm">
+                {% trans 'Explore' %}
+              </a>
+            </div>
+          </div>
+        </div>
+      {% empty %}
+        <div class="col-12">
+          <p>{% trans 'No most played products available.' %}</p>
+        </div>
+      {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <div class="section categories">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <div class="section-heading">
+            <h6>{% trans 'Categories' %}</h6>
+            <h2>{% trans 'Top Categories' %}</h2>
+          </div>
+        </div>
+        {% for category in categories %}
+        <div class="col-lg col-sm-6 col-xs-12">
+          <div class="item">
+            <h4>{{ category.name }}</h4>
+            <div class="thumb">
+              <a href="{% url 'shop' %}?category={{ category.slug }}">
+                <img src="{{ category.imageURL|default:'/static/images/default-category.jpg' }}" alt="{{ category.name }}" class="category-image">
+              </a>
+            </div>
+          </div>
+        </div>
+      {% empty %}
+        <div class="col-12">
+          <p>{% trans 'No categories available.' %}</p>
+        </div>
+      {% endfor %}
+      
+      <style>
+      .category-image {
+        width: 305px;
+        height: 394.66px;
+        object-fit: cover;
+        display: block;
+      }
+      
+      @media (max-width: 768px) {
+        .category-image {
+          width: 100%;
+          height: auto;
+          aspect-ratio: 306 / 172;
+        }
+      }
+      
+      .item {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      
+      .item h4 {
+        margin: 10px 0;
+        font-size: 1.2em;
+        color: #333;
+      }
+      
+      .thumb {
+        overflow: hidden;
+      }
+      </style>
+      </div>
+    </div>
+  </div>
+
+  <div class="section cta">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5">
+          <div class="shop">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="section-heading">
+                  <h6>{% trans 'Our Shop' %}</h6>
+                  <h2>{% trans 'Go Pre-Order Buy & Get Best' %} <em>{% trans 'Prices' %}</em> {% trans 'For You!' %}</h2>
+                </div>
+                <p>{% trans 'Lorem ipsum dolor consectetur adipiscing, sed do eiusmod tempor incididunt.' %}</p>
+                <div class="main-button">
+                  <a href="{% url 'shop' %}">{% trans 'Shop Now' %}</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 offset-lg-2 align-self-end">
+          <div class="subscribe">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="section-heading">
+                  <h6>{% trans 'NEWSLETTER' %}</h6>
+                  <h2>{% trans 'Get Up To $100 Off Just Buy ' %}<em>{% trans 'Subscribe' %}</em> {% trans 'Newsletter!' %}</h2>
+                </div>
+                <div class="search-input">
+                  <form id="subscribe" action="#">
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your email...">
+                    <button type="submit">{% trans 'Subscribe Now' %}</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+{% endblock %}

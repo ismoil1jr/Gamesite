@@ -1,0 +1,190 @@
+{% extends "base.html" %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+
+  <div class="page-heading header-text">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h3>{{ product.title }}</h3>
+          <span class="breadcrumb"><a href="{% url 'home' %}">{% trans 'Home' %}</a> > <a href="{% url 'shop' %}">{% trans 'Shop' %}</a> > {{ product.title }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="single-product section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="left-image">
+            <img src="{{ product.imageURL }}" alt="">
+          </div>
+        </div>
+        <div class="col-lg-6 align-self-center">
+          <h4>{{ product.title }}</h4>
+          <span class="price"><em>${{ product.old_price }}</em> ${{ product.new_price }}</span>
+          <p>{{ product.info }}</p>
+          <form id="qty" action="#">
+            <input type="number" class="form-control" id="quantity" aria-describedby="quantity" placeholder="1" min="1">
+            <button type="submit"><i class="fa fa-shopping-bag"></i> {% trans 'ADD TO CART' %}</button>
+          </form>
+          <ul>
+            <li><span>{% trans 'Game ID:' %}</span> {{ product.game_id }}</li>
+            <li><span>{% trans 'Genre:' %}</span> <a href="#">{{ product.genre.name }}</a></li>
+            <li><span>{% trans 'Multi-tags:' %}</span> <a href="#">{{ product.tags }}</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-12">
+          <div class="sep"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="more-info">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="tabs-content">
+            <div class="row">
+              <div class="nav-wrapper">
+                <ul class="nav nav-tabs" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="description-tab" data-bs-toggle="tab" data-bs-target="#description" type="button" role="tab" aria-controls="description" aria-selected="true">{% trans 'Description' %}</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews" type="button" role="tab" aria-controls="reviews" aria-selected="false">Reviews ({{ product.comments.count }})</button>
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">
+                  <p>{{ product.description }}</p>
+                </div>
+                <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
+                    <p>{% trans 'No reviews yet.' %}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section categories related-games">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="section-heading">
+            <h6>{{ product.genre.name }}</h6>
+            <h2>{% trans 'Related Games' %}</h2>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="main-button">
+            <a href="{% url 'shop' %}">{% trans 'View All' %}</a>
+          </div>
+        </div>
+        {% for related_product in related_products %}
+          <div class="col-lg col-sm-6 col-xs-12">
+            <div class="item">
+              <h4>{{ related_product.title }}</h4>
+              <div class="thumb">
+                <a href="{% url 'product_details' related_product.id %}"><img src="{{ related_product.imageURL }}" alt=""></a>
+              </div>
+            </div>
+          </div>
+        {% empty %}
+          <div class="col-lg-12">
+            <p>{% trans 'No related games found.' %}</p>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+<!-- Reklama bloki -->
+<div id="ad-overlay" onclick="openAdLink()">
+  <video id="ad-video" autoplay muted>
+    <source src="{% static 'videos/ad.mp4' %}" type="video/mp4">
+    Sizning brauzeringiz video formatini qo‘llab-quvvatlamaydi.
+  </video>
+  <div class="skip-btn" onclick="skipAd(event)">Skip (3)</div>
+</div>
+
+<style>
+#ad-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#ad-video {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 10px;
+}
+
+.skip-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  color: black;
+  z-index: 10000;
+}
+</style>
+
+<script>
+let adLink = "https://kia.uz/uz"; // <-- SHU YERGA REKLAMACHI SAHIFASINI QO‘Y
+let adOverlay = document.getElementById('ad-overlay');
+let skipBtn = document.querySelector('.skip-btn');
+
+let skipTimer = 3;
+let fullTimer = 5;
+
+// Skip tugmani aktiv qilish
+let skipInterval = setInterval(() => {
+  skipTimer--;
+  skipBtn.innerText = `Skip (${skipTimer})`;
+  if (skipTimer <= 0) {
+    skipBtn.innerText = "Skip";
+    skipBtn.style.pointerEvents = "auto";
+    clearInterval(skipInterval);
+  }
+}, 1000);
+
+// Avtomatik yashirish
+setTimeout(() => {
+  adOverlay.style.display = "none";
+}, fullTimer * 1000);
+
+// Reklama bosilganda saytga o‘tish
+function openAdLink() {
+  window.open(adLink, "_blank"); // yangi tabda ochiladi
+}
+
+// Skip bosilganda reklamani yopish
+function skipAd(event) {
+  event.stopPropagation(); // boshqa eventlar ishlamasin
+  adOverlay.style.display = "none";
+}
+</script>
+>
+
+
+{% endblock %}

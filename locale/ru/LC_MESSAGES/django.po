@@ -1,0 +1,194 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-10 14:46+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+msgid "Name"
+msgstr "Имя"
+
+msgid "Text"
+msgstr "Текст"
+
+msgid "Title"
+msgstr "Название"
+
+msgid "Info"
+msgstr "Информация"
+
+msgid "Tags"
+msgstr "Теги"
+
+msgid "Description"
+msgstr "Описание"
+
+msgid "Lugx Gaming Shop"
+msgstr "Игровой магазин Lugx"
+
+msgid "Home"
+msgstr "Главная"
+
+msgid "Our Shop"
+msgstr "Наш магазин"
+
+msgid "Product Details"
+msgstr "Детали товара"
+
+msgid "Contact Us"
+msgstr "Связаться с нами"
+
+msgid "Sign In"
+msgstr "Войти"
+
+msgid "Menu"
+msgstr "Меню"
+
+msgid "Copyright © 2025 LUGX Gaming Company. All rights reserved."
+msgstr "© 2025 LUGX Gaming Company. Все права защищены."
+
+msgid "Say Hello!"
+msgstr "Скажите Привет!"
+
+msgid "Address"
+msgstr "Адрес"
+
+msgid "Phone"
+msgstr "Телефон"
+
+msgid "Email"
+msgstr "Эл. почта"
+
+msgid "Send Message Now"
+msgstr "Отправить сообщение"
+
+msgid "Welcome to lugx"
+msgstr "Добро пожаловать в lugx"
+
+msgid "BEST GAMING SITE EVER!"
+msgstr "ЛУЧШИЙ ИГРОВОЙ САЙТ!"
+
+msgid "LUGX Gaming is free "
+msgstr "LUGX Gaming бесплатный "
+
+msgid "Search Now"
+msgstr "Искать сейчас"
+
+msgid "Free Storage"
+msgstr "Бесплатное хранилище"
+
+msgid "User More"
+msgstr "Больше пользователей"
+
+msgid "Reply Ready"
+msgstr "Готовы ответить"
+
+msgid "Easy Layout"
+msgstr "Простой интерфейс"
+
+msgid "Trending"
+msgstr "Популярное"
+
+msgid "Trending Games"
+msgstr "Популярные игры"
+
+msgid "View All"
+msgstr "Смотреть все"
+
+msgid "No trending products available."
+msgstr "Нет популярных товаров."
+
+msgid "TOP GAMES"
+msgstr "ТОП ИГРЫ"
+
+msgid "Most Played"
+msgstr "Самые играемые"
+
+msgid "Explore"
+msgstr "Исследовать"
+
+msgid "No most played products available."
+msgstr "Нет самых играемых товаров."
+
+msgid "Categories"
+msgstr "Категории"
+
+msgid "Top Categories"
+msgstr "Топ категории"
+
+msgid "No categories available."
+msgstr "Нет доступных категорий."
+
+msgid "Go Pre-Order Buy & Get Best"
+msgstr "Предзаказ - получи лучшее"
+
+msgid "Prices"
+msgstr "Цены"
+
+msgid "For You!"
+msgstr "Для вас!"
+
+msgid "Lorem ipsum dolor consectetur adipiscing, sed do eiusmod tempor incididunt."
+msgstr "Лорем ипсум долор сит амет, консектетур адипискинг элит."
+
+msgid "Shop Now"
+msgstr "Купить сейчас"
+
+msgid "NEWSLETTER"
+msgstr "РАССЫЛКА"
+
+msgid "Get Up To $100 Off Just Buy "
+msgstr "Получите скидку до $100 при покупке "
+
+msgid "Subscribe"
+msgstr "Подпишитесь"
+
+msgid "Newsletter!"
+msgstr "на рассылку!"
+
+msgid "Subscribe Now"
+msgstr "Подписаться сейчас"
+
+msgid "Shop"
+msgstr "Магазин"
+
+msgid "ADD TO CART"
+msgstr "В КОРЗИНУ"
+
+msgid "Game ID:"
+msgstr "ID игры:"
+
+msgid "Genre:"
+msgstr "Жанр:"
+
+msgid "Multi-tags:"
+msgstr "Теги:"
+
+msgid "No reviews yet."
+msgstr "Отзывов пока нет."
+
+msgid "Related Games"
+msgstr "Похожие игры"
+
+msgid "No related games found."
+msgstr "Похожих игр не найдено."
+
+msgid "Show All"
+msgstr "Показать все"
+
+msgid "No products available."
+msgstr "Товаров нет."
