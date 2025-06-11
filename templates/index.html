@@ -142,7 +142,7 @@
                 {{ item.category_type.name }}
               </span>
               <h4 style="font-size: 18px; font-weight: 600; margin: 10px 0;">
-                {{ item.title|truncatewords:5 }}
+                {{ item.title }}
               </h4>
               <a href="{% url 'product_details' item.id %}" class="btn btn-outline-primary btn-sm">
                 {% trans 'Explore' %}
@@ -184,7 +184,6 @@
           <p>{% trans 'No categories available.' %}</p>
         </div>
       {% endfor %}
-      
       <style>
       .category-image {
         width: 305px;

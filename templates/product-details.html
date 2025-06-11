@@ -33,7 +33,7 @@
           <ul>
             <li><span>{% trans 'Game ID:' %}</span> {{ product.game_id }}</li>
             <li><span>{% trans 'Genre:' %}</span> <a href="#">{{ product.genre.name }}</a></li>
-            <li><span>{% trans 'Multi-tags:' %}</span> <a href="#">{{ product.tags }}</a></li>
+            <li><span>{% trans 'Multi-tags:' %}</span> <a href="#">{{ product.tags|safe }}</a></li>
           </ul>
         </div>
         <div class="col-lg-12">
@@ -61,7 +61,7 @@
               </div>
               <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">
-                  <p>{{ product.description }}</p>
+                  <p>{{ product.description|safe }}</p>
                 </div>
                 <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
                     <p>{% trans 'No reviews yet.' %}</p>
@@ -105,86 +105,86 @@
       </div>
     </div>
   </div>
-<!-- Reklama bloki -->
-<div id="ad-overlay" onclick="openAdLink()">
-  <video id="ad-video" autoplay muted>
-    <source src="{% static 'videos/ad.mp4' %}" type="video/mp4">
-    Sizning brauzeringiz video formatini qo‘llab-quvvatlamaydi.
-  </video>
-  <div class="skip-btn" onclick="skipAd(event)">Skip (3)</div>
-</div>
 
-<style>
-#ad-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: black;
-  z-index: 9999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
+  <!-- Reklama bloki -->
+  <div id="ad-overlay" onclick="openAdLink()">
+    <video id="ad-video" autoplay muted>
+      <source src="{% static 'videos/ad.mp4' %}" type="video/mp4">
+      {% trans "Your browser does not support the video tag." %}
+    </video>
+    <div class="skip-btn" onclick="skipAd(event)">Skip (3)</div>
+  </div>
 
-#ad-video {
-  max-width: 80%;
-  max-height: 80%;
-  border-radius: 10px;
-}
+  <style>
+    #ad-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: black;
+      z-index: 9999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
 
-.skip-btn {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  background: rgba(255, 255, 255, 0.8);
-  padding: 10px 15px;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-  color: black;
-  z-index: 10000;
-}
-</style>
+    #ad-video {
+      max-width: 80%;
+      max-height: 80%;
+      border-radius: 10px;
+    }
 
-<script>
-let adLink = "https://kia.uz/uz"; // <-- SHU YERGA REKLAMACHI SAHIFASINI QO‘Y
-let adOverlay = document.getElementById('ad-overlay');
-let skipBtn = document.querySelector('.skip-btn');
+    .skip-btn {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 10px 15px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      color: black;
+      z-index: 10000;
+      pointer-events: none;
+    }
+  </style>
 
-let skipTimer = 3;
-let fullTimer = 5;
+  <script>
+    let adLink = "https://kia.uz/uz";
+    let adOverlay = document.getElementById('ad-overlay');
+    let skipBtn = document.querySelector('.skip-btn');
 
-// Skip tugmani aktiv qilish
-let skipInterval = setInterval(() => {
-  skipTimer--;
-  skipBtn.innerText = `Skip (${skipTimer})`;
-  if (skipTimer <= 0) {
-    skipBtn.innerText = "Skip";
-    skipBtn.style.pointerEvents = "auto";
-    clearInterval(skipInterval);
-  }
-}, 1000);
+    let skipTimer = 3;
+    let fullTimer = 17;
 
-// Avtomatik yashirish
-setTimeout(() => {
-  adOverlay.style.display = "none";
-}, fullTimer * 1000);
+    // Skip tugmani aktiv qilish
+    let skipInterval = setInterval(() => {
+      skipTimer--;
+      skipBtn.innerText = `Skip (${skipTimer})`;
+      if (skipTimer <= 0) {
+        skipBtn.innerText = "Skip";
+        skipBtn.style.pointerEvents = "auto";
+        clearInterval(skipInterval);
+      }
+    }, 1000);
 
-// Reklama bosilganda saytga o‘tish
-function openAdLink() {
-  window.open(adLink, "_blank"); // yangi tabda ochiladi
-}
+    // Avto-yashirish
+    setTimeout(() => {
+      adOverlay.style.display = "none";
+    }, fullTimer * 1000);
 
-// Skip bosilganda reklamani yopish
-function skipAd(event) {
-  event.stopPropagation(); // boshqa eventlar ishlamasin
-  adOverlay.style.display = "none";
-}
-</script>
->
+    // Reklamaga bosilganda saytga o‘tish
+    function openAdLink() {
+      window.open(adLink, "_blank");
+    }
 
+    // Skip bosilganda
+    function skipAd(event) {
+      event.stopPropagation();
+      adOverlay.style.display = "none";
+    }
+  </script>
 
 {% endblock %}

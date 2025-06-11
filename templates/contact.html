@@ -24,7 +24,7 @@
                 <h2>{% trans 'Say Hello!' %}</h2>
               </div>
               {% for i in contact %}
-                  <p>{{ i.info }}</p>
+                  <p>{{ i.info|safe }}</p>
                   <ul>
                     <li><span>{% trans 'Address' %}</span>{{ i.address }}</li>
                     <li><span>{% trans 'Phone' %}</span>{{ i.phone }}</li>
