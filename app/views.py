@@ -5,9 +5,9 @@ from .models import Product, Category,Contact,Comment
 
 class HomeView(View):
     def get(self, request):
-        trending_products = Product.objects.filter(is_trending=True)[:5]
+        trending_products = Product.objects.filter(is_trending=True)[:8]
         most_played_products = Product.objects.filter(is_most_played=True).order_by('-play_count')[:6]
-        categories = Category.objects.language(request.LANGUAGE_CODE).all()[:5]
+        categories = Category.objects.language(request.LANGUAGE_CODE).all()[:8]
         context = {
             'trending_products': trending_products,
             'most_played_products': most_played_products,
